@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота: DOM, Таймери, Map/Set</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="task-section">
+        <h2>Завдання 1: Лампочка</h2>
+        <div id="bulb" class="bulb off"></div>
+        <div class="controls">
+            <button id="toggleBulbBtn">Включити</button>
+            <select id="bulbType">
+                <option value="normal">Звичайна</option>
+                <option value="led">Світлодіодна (LED)</option>
+                <option value="energy">Енергозберігаюча</option>
+            </select>
+            <button id="brightnessBtn">Змінити яскравість</button>
+            <p><small>Лампочка автоматично вимкнеться через 5 хвилин бездіяльності миші.</small></p>
+        </div>
+    </div>
+
+    <div class="task-section">
+        <h2>Завдання 2: Світлофор</h2>
+        <div class="traffic-light">
+            <div id="tl-red" class="circle red"></div>
+            <div id="tl-yellow" class="circle yellow"></div>
+            <div id="tl-green" class="circle green"></div>
+        </div>
+        <div id="tl-status" class="status-text">Вимкнено</div>
+        <div class="controls">
+            <button id="tl-start">Запустити світлофор</button>
+            <button id="tl-next">Наступний стан</button>
+            <button id="tl-settings">Налаштувати час</button>
+        </div>
+    </div>
+
+    <div class="task-section">
+        <h2>Завдання 3: Дата та час</h2>
+        
+        <h3>Цифровий годинник</h3>
+        <div class="clock">
+            <span id="hours">00</span><span class="blink">:</span><span id="minutes">00</span><span class="blink">:</span><span id="seconds">00</span>
+        </div>
+
+        <h3>Таймер зворотного відліку</h3>
+        <input type="datetime-local" id="countdownInput">
+        <button id="startCountdownBtn">Запустити таймер</button>
+        <p id="countdownDisplay">Оберіть дату та натисніть старт</p>
+
+        <h3>Календар та День Народження</h3>
+        <input type="month" id="calendarInput">
+        <p>Обраний місяць: <strong id="calendarDisplay">...</strong></p>
+        
+        <input type="date" id="bdayInput">
+        <button id="bdayBtn">Скільки до дня народження?</button>
+        <p id="bdayDisplay"></p>
+    </div>
+
+    <div class="task-section">
+        <h2>Завдання 4: Map, Set, WeakMap, WeakSet</h2>
+        <p>Це завдання не має візуального інтерфейсу. <strong>Відкрий консоль (F12)</strong>, щоб побачити роботу магазину!</p>
+    </div>
+
+    <script src="task1_bulb.js"></script>
+    <script src="task2_traffic.js"></script>
+    <script src="task3_time.js"></script>
+    <script src="task4_store.js"></script>
+</body>
+</html>
