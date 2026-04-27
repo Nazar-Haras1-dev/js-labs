@@ -1,4 +1,3 @@
-// Годинник
 setInterval(() => {
     const now = new Date();
     document.getElementById('hours').innerText = String(now.getHours()).padStart(2, '0');
@@ -6,7 +5,6 @@ setInterval(() => {
     document.getElementById('seconds').innerText = String(now.getSeconds()).padStart(2, '0');
 }, 1000);
 
-// Таймер
 let countdownTimer;
 document.getElementById('startCountdownBtn').addEventListener('click', () => {
     clearInterval(countdownTimer);
@@ -33,12 +31,10 @@ document.getElementById('startCountdownBtn').addEventListener('click', () => {
     }, 1000);
 });
 
-// Календар
 document.getElementById('calendarInput').addEventListener('change', (e) => {
     document.getElementById('calendarDisplay').innerText = e.target.value; 
 });
 
-// День народження
 document.getElementById('bdayBtn').addEventListener('click', () => {
     const bdayStr = document.getElementById('bdayInput').value;
     if (!bdayStr) return alert("Введіть дату!");

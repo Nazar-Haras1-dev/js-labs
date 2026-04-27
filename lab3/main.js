@@ -17,6 +17,13 @@ function task1_sumOfFirst50() {
 function task2_factorial(n) {
     if (isNaN(n) || n < 0) return "Помилка: введіть додатне число.";
     let result = 1;
+    let i = 1;
+    
+    while(i <=n ){
+        result *= i;
+        i++;
+    }
+
     for (let i = 1; i <= n; i++) {
         result *= i;
     }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список товарів</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Список товарів</h1>
+        <h2 id="total-price">Загальна вартість: 0 ₴</h2>
+    </header>
+
+    <div class="controls">
+        <button id="btn-add">Додати новий товар</button>
+        <div id="filters">
+            <button data-category="Електроніка" class="filter-btn">Електроніка</button>
+            <button data-category="Одяг" class="filter-btn">Одяг</button>
+            <button data-category="Книги" class="filter-btn">Книги</button>
+            <button id="btn-reset-filter" style="background-color: #6c757d;">Скинути фільтри</button>
+        </div>
+        <div id="sorting">
+            <button data-sort="price" class="sort-btn">Сортувати за ціною</button>
+            <button data-sort="dateCreated" class="sort-btn">Сортувати за датою створення</button>
+            <button data-sort="dateUpdated" class="sort-btn">Сортувати за датою оновлення</button>
+        </div>
+    </div>
+
+    <div id="empty-message">Наразі список товарів пустий. Додайте новий товар.</div>
+    
+    <div id="product-list"></div>
+
+    <div id="modal" class="modal">
+        <form id="product-form" class="modal-content">
+            <h3 id="modal-title">Додати товар</h3>
+            <input type="hidden" id="prod-id">
+            <input type="text" id="prod-name" placeholder="Назва товару" required>
+            <input type="number" id="prod-price" placeholder="Ціна" required min="1">
+            <select id="prod-category" required>
+                <option value="" disabled selected>Оберіть категорію</option>
+                <option value="Електроніка">Електроніка</option>
+                <option value="Одяг">Одяг</option>
+                <option value="Книги">Книги</option>
+            </select>
+            <input type="url" id="prod-img" placeholder="URL зображення" required>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <button type="submit">Зберегти</button>
+                <button type="button" id="btn-close-modal" style="background-color: #6c757d;">Скасувати</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="snackbar"></div>
+</body>
+</html>

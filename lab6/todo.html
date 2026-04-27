@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo-style.css">
+    <script src="todo-script.js" defer></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>Список завдань</h2>
+        
+        <form id="todo-form">
+            <input type="text" id="task-input" placeholder="Введіть нове завдання..." required minlength="3">
+            <button type="submit">Додати</button>
+        </form>
+
+        <div class="controls" id="sort-controls">
+            <button data-sort="dateAdded">За датою додавання</button>
+            <button data-sort="status">За станом виконання</button>
+            <button data-sort="dateUpdated">За датою оновлення</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+    </div>
+</body>
+</html>

@@ -1,10 +1,11 @@
-const titleElement = document.querySelector('h1');
-titleElement.innerText = 'Hello world!';
+const mySpan = document.getElementsByTagName('span')[0];
 
-function showNameWarning() {
-    console.warn('Назарій Гарас');
+function showStudentName(studentName) {
+    mySpan.textContent = studentName;
 }
 
-const actionButton = document.querySelector('button');
+const actionBtn = document.getElementById('hoverButton');
 
-actionButton.onmousemove = showNameWarning;
+actionBtn.onmouseover = function() {
+    showStudentName("Nazar Haras");
+};

@@ -1,0 +1,26 @@
+body { font-family: sans-serif; background: #ececec; display: flex; justify-content: center; padding: 20px; }
+.todo-container { background: white; padding: 20px; border-radius: 8px; width: 100%; max-width: 500px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h2 { text-align: center; }
+
+form { display: flex; gap: 10px; margin-bottom: 20px; }
+input[type="text"] { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button { padding: 10px 15px; border: none; background: #28a745; color: white; border-radius: 4px; cursor: pointer; }
+
+.controls { display: flex; gap: 5px; margin-bottom: 15px; flex-wrap: wrap; justify-content: center; }
+.controls button { background: #007bff; font-size: 12px; }
+
+ul { list-style: none; padding: 0; }
+
+/* Стилі завдання з анімацією появи */
+li { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f9f9f9; margin-bottom: 10px; border-radius: 4px; animation: slideIn 0.3s ease; transition: 0.3s; }
+
+/* Стиль для виконаного завдання (цей клас перемикається через JS) */
+li.completed { background: #d4edda; border-left: 5px solid #28a745; }
+li.completed .task-text { text-decoration: line-through; color: #888; }
+
+.task-text { flex: 1; cursor: pointer; margin-right: 10px; }
+.task-actions { display: flex; gap: 5px; }
+.btn-del { background: #dc3545; }
+.btn-edit { background: #ffc107; color: black; }
+
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }

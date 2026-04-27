@@ -1,4 +1,3 @@
-console.log("%c=== ЗАВДАННЯ 4: МАГАЗИН ===", "color: blue; font-weight: bold; font-size: 16px;");
 
 const storeCatalog = new Map(); 
 const activeCategories = new Set(); 
@@ -69,7 +68,6 @@ class Store {
     }
 }
 
-// Демонстрація роботи
 const myStore = new Store();
 myStore.addProduct(101, "Ноутбук Asus", 25000, 10, "Електроніка");
 myStore.addProduct(102, "Миша Logitech", 1500, 50, "Аксесуари");
